@@ -1,12 +1,13 @@
 import { Console } from '@woowacourse/mission-utils';
-import { dateoutput } from './Output/DateOutput.js';
-import { menuoutput } from './Output/MenuOutput.js';
-import { beforetotal } from './Output/BeforeTotal.js';
-import { champagne } from './Output/Champagne.js';
-import { sumlist } from './Output/SumList.js';
-import { summoney } from './Output/SumMoney.js';
-import { aftertotal } from './Output/AfterTotal.js';
-import { badge } from './Output/Badge.js';
+import { dateoutput } from './Event/DateOutput.js';
+import { menuoutput } from './Event/MenuOutput.js';
+import { beforetotal } from './Event/BeforeTotal.js';
+import { champagne } from './Event/Champagne.js';
+import { sumlist } from './Event/SumList.js';
+import { summoney } from './Event/SumMoney.js';
+import { aftertotal } from './Event/AfterTotal.js';
+import { badge } from './Event/Badge.js';
+import { dateerror } from './Exception/DateError.js';
 const OutputView = {
   printStart() {
     Console.print('안녕하세요! 우테코 식당 12월 이벤트 플래너입니다.\n');
@@ -34,6 +35,9 @@ const OutputView = {
   },
   printBadge() {
     Console.print('<12월 이벤트 배지>\n');
+  },
+  printError(error) {
+    Console.print(error.message);
   },
 };
 
