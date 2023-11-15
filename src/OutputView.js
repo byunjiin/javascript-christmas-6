@@ -65,8 +65,12 @@ const OutputView = {
       );
     }
   },
-  printSumMoney() {
+  printSumMoney(money) {
     Console.print('<총혜택 금액>');
+    if (money > 0) {
+      return Console.print(`-${money.toLocaleString()}원\n`);
+    }
+    return Console.print(`0원\n`);
   },
   printAfterTotal() {
     Console.print('<할인 후 예상 결제 금액>');

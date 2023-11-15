@@ -1,5 +1,6 @@
 import { beforetotal } from './Event/BeforeTotal.js';
 import { menuoutput } from './Event/MenuOutput.js';
+import { summoney } from './Event/SumMoney.js';
 import { dateerror } from './Exception/DateError.js';
 import { menuerror } from './Exception/MenuError.js';
 import OutputView from './OutputView.js';
@@ -16,8 +17,9 @@ class App {
     OutputView.printBeforeTotal(sum);
     OutputView.printChampagne(sum);
     OutputView.printSumList(errordate, sum, errormenu);
-    OutputView.printSumMoney();
-    OutputView.printAfterTotal();
+    const money = summoney(errordate, sum, errormenu);
+    OutputView.printSumMoney(money);
+    OutputView.printAfterTotal(money, sum);
     OutputView.printBadge();
   }
 }
