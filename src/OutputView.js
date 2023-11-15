@@ -23,23 +23,28 @@ const OutputView = {
     }
     Console.print('');
   },
-  printBeforeTotal() {
-    Console.print('<할인 전 총주문 금액>\n');
+  printBeforeTotal(sum) {
+    Console.print('<할인 전 총주문 금액>');
+    Console.print(`${sum.toLocaleString()}원\n`);
   },
-  printChampagne() {
-    Console.print('<증정 메뉴>\n');
+  printChampagne(sum) {
+    Console.print('<증정 메뉴>');
+    if (champagne(sum)) {
+      return Console.print('샴페인 1개\n');
+    }
+    return Console.print('없음\n');
   },
   printSumList() {
-    Console.print('<혜택 내역>\n');
+    Console.print('<혜택 내역>');
   },
   printSumMoney() {
-    Console.print('<총혜택 금액>\n');
+    Console.print('<총혜택 금액>');
   },
   printAfterTotal() {
-    Console.print('<할인 후 예상 결제 금액>\n');
+    Console.print('<할인 후 예상 결제 금액>');
   },
   printBadge() {
-    Console.print('<12월 이벤트 배지>\n');
+    Console.print('<12월 이벤트 배지>');
   },
   printError(error) {
     Console.print(error.message);

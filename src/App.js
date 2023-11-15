@@ -1,3 +1,4 @@
+import { beforetotal } from './Event/BeforeTotal.js';
 import { menuoutput } from './Event/MenuOutput.js';
 import { dateerror } from './Exception/DateError.js';
 import { menuerror } from './Exception/MenuError.js';
@@ -10,8 +11,9 @@ class App {
     const [stringmenu, numbermenu] = menuoutput(errormenu);
     OutputView.printDate(errordate);
     OutputView.printMenu(errormenu, stringmenu, numbermenu);
-    OutputView.printBeforeTotal();
-    OutputView.printChampagne();
+    const sum = beforetotal(stringmenu, numbermenu);
+    OutputView.printBeforeTotal(sum);
+    OutputView.printChampagne(sum);
     OutputView.printSumList();
     OutputView.printSumMoney();
     OutputView.printAfterTotal();
