@@ -12,7 +12,7 @@ export const mainMenu = {
   '크리스마스파스타':25000
 }
 // prettier-ignore
-export const dssert = {
+export const dessert = {
   '초코케이크':15000,
   '아이스크림':5000
 }

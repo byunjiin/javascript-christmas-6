@@ -3,6 +3,7 @@ import { menuoutput } from './Event/MenuOutput.js';
 import { dateerror } from './Exception/DateError.js';
 import { menuerror } from './Exception/MenuError.js';
 import OutputView from './OutputView.js';
+
 class App {
   async run() {
     OutputView.printStart();
@@ -14,7 +15,7 @@ class App {
     const sum = beforetotal(stringmenu, numbermenu);
     OutputView.printBeforeTotal(sum);
     OutputView.printChampagne(sum);
-    OutputView.printSumList();
+    OutputView.printSumList(errordate, sum, errormenu);
     OutputView.printSumMoney();
     OutputView.printAfterTotal();
     OutputView.printBadge();
