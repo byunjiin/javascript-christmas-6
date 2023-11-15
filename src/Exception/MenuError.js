@@ -20,4 +20,5 @@ export async function menuerror() {
       return menuerror();
     }
   }
+  return menu;
 }
