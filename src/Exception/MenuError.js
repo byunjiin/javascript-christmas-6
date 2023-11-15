@@ -6,8 +6,8 @@ import { onlymenu } from './OnlyMenu.js';
 import { onlydrink } from './OnlyDrink.js';
 import { duplicate } from './Duplicate.js';
 // 기능2. 주문할 메뉴와 갯수 받아오기(에러)
+export const menudata = [appetizer, mainMenu, dssert, drink];
 export async function menuerror() {
-  const menudata = [appetizer, mainMenu, dssert, drink];
   const menu = await InputView.readMenu();
   // prettier-ignore
   const found =
