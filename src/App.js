@@ -20,7 +20,7 @@ class App {
     const money = summoney(errordate, sum, errormenu);
     OutputView.printSumMoney(money);
     OutputView.printAfterTotal(money, sum);
-    OutputView.printBadge();
+    OutputView.printBadge(money);
   }
 }
 

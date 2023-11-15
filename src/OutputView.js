@@ -1,7 +1,6 @@
 import { Console } from '@woowacourse/mission-utils';
 import { champagne } from './Event/Champagne.js';
 import { summoney } from './Event/SumMoney.js';
-import { aftertotal } from './Event/AfterTotal.js';
 import { badge } from './Event/Badge.js';
 import { dateerror } from './Exception/DateError.js';
 import { chirstmas } from './Event/Christmas.js';
@@ -72,11 +71,13 @@ const OutputView = {
     }
     return Console.print(`0원\n`);
   },
-  printAfterTotal() {
+  printAfterTotal(money, sum) {
     Console.print('<할인 후 예상 결제 금액>');
+    Console.print(`${(sum - money).toLocaleString()}원\n`);
   },
-  printBadge() {
+  printBadge(money) {
     Console.print('<12월 이벤트 배지>');
+    Console.print(`${badge(money)}`);
   },
   printError(error) {
     Console.print(error.message);
